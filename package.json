@@ -1,0 +1,21 @@
+{
+  "name": "wikistacksql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e html,js,css ./app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.2"
+  },
+  "dependencies": {
+    "morgan": "^1.7.0",
+    "pg": "^5.2.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.23.3"
+  }
+}
