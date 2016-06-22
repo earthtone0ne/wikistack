@@ -5,6 +5,7 @@ var swig = require('swig');
 var bodyParser =require('body-parser');
 var models = require('./models');
 var routes = require('./routes/wiki');
+var path = require('path');
 
 app.set('views', __dirname + '/views');
 // have res.render work with html files
@@ -19,7 +20,8 @@ app.use(bodyParser.urlencoded({
     }));
 
 app.use(morgan('combined'));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname,'/public')));
+
 
 models.User.sync({})
 .then(function () {
